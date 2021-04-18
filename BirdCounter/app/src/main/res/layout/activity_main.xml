@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/LeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="50dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/RightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="50dp"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_Title"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline"
+        app:layout_constraintEnd_toStartOf="@id/RightGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tvCurrentBirdCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_BirdCount"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline"
+        app:layout_constraintEnd_toStartOf="@id/RightGuideline"
+        />
+
+    <Button
+        android:id="@+id/btnBlackBird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentBirdCount"
+        app:layout_constraintStart_toEndOf="@id/LeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/btnYellowBird"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnBrownBird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/brown"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentBirdCount"
+        app:layout_constraintEnd_toStartOf="@id/RightGuideline"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_brown"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnYellowBird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintTop_toBottomOf="@id/btnBlackBird"
+        app:layout_constraintStart_toEndOf="@id/LeftGuideline"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_yellow"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnRedBird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/btnBrownBird"
+        app:layout_constraintEnd_toStartOf="@id/RightGuideline"
+        app:layout_constraintStart_toStartOf="@id/btnBrownBird"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_red"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnRedBird"
+        app:layout_constraintEnd_toStartOf="@id/RightGuideline"
+        app:layout_constraintStart_toStartOf="@id/LeftGuideline"
+        android:layout_marginTop="10dp"
+        android:text="@string/btn_reset"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
